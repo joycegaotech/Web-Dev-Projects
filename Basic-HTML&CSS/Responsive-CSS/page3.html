@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        background: rgb(8,19,80);
+        background: linear-gradient(90deg, rgba(8,19,80,1) 0%, rgba(24,9,121,1) 38%, rgba(5,28,173,1) 58%, rgba(128,0,255,1) 98%);
+        align-items: center;
+        justify-content: center;
+        font-family: 'Lucida Sans Unicode';
+        font-size: 40px;
+        height: 100vh;
+        overflow: hidden;
+        color: #ff6a00;
+        word-wrap: break-word;
+    }
+    *{ box-sizing: border-box; }
+    .container{
+        display: inline-block;
+    }
+    .end1, .middle1, .middle2{
+        display: inline-block;
+        overflow:hidden;
+        height: 3em;
+    }
+    .end2{
+        position:absolute;
+        color:#ff6a00
+    }
+    .middle1, .middle2{
+        color: #cfcfcf
+    }
+    .middle1 {
+        animation: ani1 5s infinite;
+        animation-delay: -3s;
+        max-width: 0;
+    }
+    .middle2 {
+        animation: ani2 5s infinite;
+        animation-delay: -3s;
+        max-width: 0;
+    }
+
+    @keyframes ani1 {
+        0% {
+        max-width: 500px;
+    }
+    
+    25% {
+        max-width: 0;
+    }
+    
+    75% {
+        max-width: 0;
+    }
+    
+    90% {
+        max-width: 500px;
+    }
+    
+    100% {
+        max-width: 500px;
+    }
+    }
+
+    @keyframes ani2 {
+        0% {
+            max-width: 0;
+        }
+
+        25% {
+            max-width: 0;
+        }
+
+        50% {
+            max-width: 500px;
+        }
+
+        75% {
+            max-width: 0;
+        }
+
+        100% {
+            max-width: 0;
+        }
+    }
+</style>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  
+        <h1 class="start">
+            <span class="end1">S</span><span class="middle1">liding Text Effect</span>
+            <span class="middle2"><i class="fas fa-code"></i></span><span class="end2"></span>
+        </h1>
+    </body>
+</html>
