@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <title>Responsive CSS Site</title>
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Quicksand', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        a:link{
+            text-decoration: none;
+        }
+
+        .images{
+            height: 400px;
+            width: 450px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+
+        p::first-letter{
+            font-size:50px;
+            float: left;
+            margin: 5px;
+        }
+
+
+
+        #layout {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        #nav{
+            flex-basis: 100%;
+            align-items:center;
+            text-align: center;
+            font-size: 28px;
+            padding: 50px;
+            word-spacing: 100px;
+            border-bottom: 1px solid black;
+        }
+        #sidebar{
+            flex-basis: 20%;
+            font-size: 24px;
+            border-bottom: 1px solid black;
+            align-items: center;
+            position:sticky;
+            top: 10px;
+            width:100%;
+        
+        }
+        @media (max-width: 540px){
+            #nav{
+                top:0;
+                left:0;
+                padding: 50px 160px;
+                text-align: center;
+                flex-wrap: wrap;
+            }
+            #sidebar{
+                text-align: center;
+            }
+            #content{
+                text-align: center;
+            }
+            
+        }
+
+        @media (min-device-width: 541px) and (max-device-width: 1030px) {
+
+            #content{
+                justify-content:center;
+            }
+
+            .stylings{
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+
+
+        #content{
+            flex: 1 1 80%;
+            border-bottom: 1px solid black;
+            font-size: 24px;
+            position: sticky;
+            top: 10px;
+            padding-left: 15px;
+        }
+
+        .contentbox{
+            height: auto;
+            width: auto;
+            border-bottom: 1px solid black;
+            position: relative;
+        }
+
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: black;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        a{
+            color: black;
+            text-decoration: underline;
+        }
+
+        h2{
+            text-align:center;
+        }
+        .stylings{
+            background-color: white;
+            /* width: 100%; */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div id="nav">
+            <a href="page1.html" class="hover-underline-animation">Page1</a>
+            <a href="page2.html" class="hover-underline-animation">Page2</a>
+            <a href="page3.html" class="hover-underline-animation">Page3</a>
+        </div>
+        <div class="stylings">
+            <div id="sidebar"">
+                <h2><b>Food Culture</b></h2>
+                <hr>
+                <div>
+                    <a href="#JapaneseImgs" class="hover-underline-animation"><h3>Japanese</h3></a>
+                </div>
+                <div>
+                    <a href="#ItalianImgs" class="hover-underline-animation"><h3>Italian</h3></a>
+                </div>
+                <div>
+                    <a href="#ChineseImgs" class="hover-underline-animation"><h3>Chinese</h3></a>
+                </div>
+                <div>
+                    <a href="#SpanishImgs" class="hover-underline-animation"><h3>Spanish</h3></a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="content">
+            <h2><b>Content</b></h2>
+            <hr>
+            <div class="contentbox">
+                <img src="../travelproject/images/japanfood1.png" class="images" id="JapaneseImgs">
+                <p>Japanese cuisine encompasses the regional and traditional foods of Japan, which have developed through centuries of political, economic, and social changes. The traditional cuisine of Japan (Japanese: washoku) is based on rice with miso soup and other dishes; there is an emphasis on seasonal ingredients. Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, often grilled, but also served raw as sashimi or in sushi. Seafood and vegetables are also deep-fried in a light batter, as tempura. Apart from rice, a staple includes noodles, such as soba and udon. Japan also has many simmered dishes, such as fish products in broth called oden, or beef in sukiyaki and nikujaga.</p>
+                <p>Japanese cuisine is based on combining the staple food, which is steamed white rice or gohan (御飯), with one or more okazu, "main" or "side" dishes. This may be accompanied by a clear or miso soup and tsukemono (pickles). The phrase ichijū-sansai (一汁三菜, "one soup, three sides") refers to the makeup of a typical meal served but has roots in classic kaiseki, honzen, and yūshoku cuisine. The term is also used to describe the first course served in standard kaiseki cuisine nowadays.[12]
+
+                </p>
+            </div>
+            <div class="contentbox">
+                <img src="../travelproject/images/italianfood.png" class="images" id="ItalianImgs">
+                <p>Italian cuisine (Italian: Cucina italiana) is a Mediterranean cuisine consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula since antiquity, and later spread around the world together with waves of Italian diaspora. Significant changes occurred with the colonization of the Americas and the introduction of potatoes, tomatoes, capsicums, maize and sugar beet — the latter introduced in quantity in the 18th century. It is one of the best known and most appreciated gastronomies worldwide.
+                </p>
+                <p>Italian cuisine includes deeply rooted traditions common to the whole country, as well as all the regional gastronomies, different from each other, especially between the north, the centre and the south of Italy, which are in continuous exchange. Many dishes that were once regional have proliferated with variations throughout the country. Italian cuisine offers an abundance of taste, and is one of the most popular and copied around the world. The cuisine has influenced several other cuisines around the world, chiefly that of the United States.
+                
+                </p>
+            </div>
+            <div class="contentbox">
+                <img src="../travelproject/images/chinesefood1.png" class="images" id="ChineseImgs">
+                <p>Chinese cuisine encompasses the numerous cuisines originating from China, as well as overseas cuisines created by the Chinese diaspora. Because of the Chinese diaspora and historical power of the country, Chinese cuisine has influenced many other cuisines in Asia and beyond, with modifications made to cater to local palates. Chinese food staples such as rice, soy sauce, noodles, tea, chili oil, and tofu, and utensils such as chopsticks and the wok, can now be found worldwide.
+                </p>
+
+                <p>The preferences for seasoning and cooking techniques of Chinese provinces depend on differences in historical background and ethnic groups. Geographic features including mountains, rivers, forests, and deserts also have a strong effect on the local available ingredients, considering that the climate of China varies from tropical in the south to subarctic in the northeast. Imperial royal and noble preference also plays a role in the change of Chinese cuisine. Because of imperial expansion and trading, ingredients and cooking techniques from other cultures have been integrated into Chinese cuisines over time.</p>
+            </div>
+            <div class="contentbox">
+                <img src="../travelproject/images/spanishfood.jpg" class="images" id="SpanishImgs">
+                <p>Spanish cuisine consists of the cooking traditions and practices from Spain. Olive oil (of which Spain is the world's largest producer) is heavily used in Spanish cuisine. It forms the base of many vegetable sauces (known in Spanish as sofritos). Herbs most commonly used include parsley, oregano, rosemary and thyme. The use of garlic has been noted as "common to all Spanish cooking." The most used meats in Spanish cuisine include chicken, pork, lamb and veal. Fish and seafood are also consumed on a regular basis.
+                </p>
+                <p>A continental-style breakfast (desayuno) may be taken just after waking up, or before entering the workplace. Common products taken during breakfast include coffee, milk, chocolate drink, biscuits (most notably Marie biscuits), magdalenas, toasts (featuring ingredients such as oil, tomato and butter, bread toasts are a staple part of the desayuno either consumed at home or in bars) or churros. </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
