@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CGHS Intranet</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <h1 id="title">CGHS Intranet Signup</h1>
+    <p id="description">Thank you for visiting CGHS Intranet! </p><p>Please fill in all the required fields of this form to signup for an account.</p>
+    <form method="post" id="survey-form">
+    
+    <fieldset>
+      <h3>Personal Information</h3>
+      <label for="name" id="name-label">Name <input id="name" name="name" type="text" placeholder="Enter your full name"required/></label>
+      <label for="email" id="email-label">Email <input id="email" type="email" name="email" placeholder="Enter your school email" required/></label>
+      <label for="password" id="password-label">Password <input id="password" type="password" name="password" placeholder="Create a password with more than 6 characters" required /></label>
+      <label for="dropdown">Year <select id="dropdown" name="year">
+          <option value="">(Select year)</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select> 
+      </label>
+      <label for="number" id="number-label">Age (optional) <input id="number" type="number" name="number" min="10" max="20" placeholder="Enter your current age"/></label>
+    </fieldset>
+
+    <fieldset>
+      <h3>Subject interest:</h3>
+      <label class="subjects">
+        <textarea placeholder="Write down the subjects you are interested in"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+        <label for="username">Username<input id="username" type="text name="username" placeholder="Enter a username (no spaces and special symbols)" required/></label>
+
+      <label for="profile-picture">Upload a profile picture (optional) <input id="profile-picture" type="file" name="file" /></label>
+      <label for="bio">Biography (optional)
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Please keep it appropiate and not offending anyone"></textarea>
+        </label>
+    </fieldset>
+
+    <fieldset>
+      <h3>Extra Curriculars at School</h3>
+      <p>(this section is optional)</p>
+      <label class="ecs">
+        <p>Select the extra curricular clubs you are involved in:</p>
+        <p class="no-center">Leadership:</p>
+        <label><input id="prefect" name="prefect" value="prefect" type="checkbox" class="inline" />Prefect</label>
+        <label><input id="src" name="src" value="src" type="checkbox" class="inline" />SRC</label>
+        <label><input id="transport" name="transport" value="transport" type="checkbox" class="inline" />Transport Prefect</label>
+      <label><input id="library" name="library" value="library" type="checkbox" class="inline" />Library Prefect</label>
+        <label><input id="sports-council" value="sports-council" name="sports-council" type="checkbox" class="inline" />Sports Council</label>
+        <br>
+
+        <p class="no-center">Sports:</p>
+        <label><input id="sports-rep" name="sports-rep" value="sports-rep" type="checkbox" class="inline" />KO Sports Representative Team</label>
+        <label><input id="sports-grade" value= "sports-grade" name="sports-grade" type="checkbox" class="inline" />Grade Sports Representative Team</label>
+        <br>
+        
+        <p class="no-center">Performing Arts:</p>
+        <label><input id="dance" name="dance" value="dance" type="checkbox" class="inline" />Dance Ensemble</label>
+        <label><input id="stage-band" name="stage-band" type="checkbox" value="stage-band" class="inline" />Stage Band</label>
+        <label><input id="wind-ensemble" name="wind-ensemble" type="checkbox" value="wind-ensemble" class="inline" />Wind Ensemble</label>
+        <label><input id="orchestra" name="orchestra" value="orchestra" type="checkbox" class="inline" />Orchestra</label>
+        <label><input id="jnr-choir" name="jnr-choir" value="jnr-choir" type="checkbox" class="inline" />Junior Choir</label>
+        <label><input id="snr-choir" name="snr-choir" type="checkbox" value="snr-choir" class="inline" />Senior Choir</label>
+        <br>
+
+        <p class="no-center">Speaking-based:</p>
+        <label><input id="debating" name="debating" value="debating" type="checkbox" class="inline" />Debating</label>
+        <label><input value="public-speaking" id="public-speaking" name="public-speaking" type="checkbox" class="inline" />Public Speaking</label>
+        <label><input id="mock-trial" value="mock-trial" name="mock-trial" type="checkbox" class="inline" />Mock Trial</label>
+        <br>
+
+        <p class="no-center">Interest clubs:</p>
+        <label><input id="social-justice" name="social-justice" value="social justice" type="checkbox" class="inline" />Social Justice</label>  
+        <label><input id="cloud9" name="cloud9" type="checkbox" class="inline" value="cloud9"/>Cloud 9</label>
+        <label><input id="green-team" name="green-team" value="green-team" type="checkbox" class="inline" />Green Team</label>
+        <label><input id="prefect" name="ecs" type="checkbox" class="inline" value="sound-lighting"/>Sound and Lighting</label>
+        <label><input id="rev" name="rev" type="checkbox" class="inline" value="rev"/>REV</label>
+        <label><input id="crochet" name="crochet" type="checkbox" class="inline" value="crochet"/>Crochet Club</label>
+        </label>                             
+    </fieldset>
+    <fieldset>
+      <label for="yes-both">
+        <input type="radio" class="inline" value="yes" id="yes" name="permission"/> I give permission for making my extra curricular involvement and/or subject interests visible to other students
+      </label>
+      <label for="no">
+        <input type="radio" class="inline" value="no" id="no" name="permission"/> I don't give permission to the above statement
+      </label>
+    </fieldset>
+    <input type="submit" id="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
