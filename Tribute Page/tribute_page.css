@@ -1,0 +1,40 @@
+#image{
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+h1,p{
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+}
+.top-part{
+  padding: 10px 0;  
+  background-color: #ccbbaa;
+  max-width: 100%;
+}
+
+body{
+  background-color: #d6c8bb;
+  font-family: "Ariel", sans-serif;
+}
+#tribute-info {
+  margin: 0 auto;
+  max-width: 75%;
+  line-height: 1.75em;
+  background-color: #e0d6cc;
+  padding: 20px 50px;
+
+}
+.tribute-title{
+  text-align: center;
+}
+#footerish{
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #ccbbaa;
+  padding: 20px 50px;
+  line-height: 1.5em;
+}
